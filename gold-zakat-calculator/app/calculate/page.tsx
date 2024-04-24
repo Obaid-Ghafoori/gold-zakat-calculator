@@ -46,6 +46,31 @@ const ZakatCalculatorPage = () => {
   };
 
   const handleSubmit = () => {
+    let isValid = true;
+    let errorMessage = "";
+
+    for (const item of goldItems) {
+      const grams = parseFloat(item.grams);
+      const karat = parseFloat(item.karat);
+
+      if (isNaN(grams) || grams < 0) {
+        isValid = false;
+        errorMessage = "Please enter a valid grams value greater than or equal to 0.";
+        break;
+      }
+
+      if (isNaN(karat) || karat < 1 || karat > 24) {
+        isValid = false;
+        errorMessage = "Please enter a karat value between 1 and 24.";
+        break;
+      }
+    }
+
+    if (!isValid) {
+      alert(errorMessage);
+      return;
+    }
+
     const { zakatDetails, totalZakat } = calculateZakat();
     const resultText =
       `Zakat Details:\n` +
@@ -58,20 +83,6 @@ const ZakatCalculatorPage = () => {
         .join("") +
       `Total Zakat Payable: ${totalZakat.toFixed(4)}`;
     setZakatResult(resultText);
-
-
-    // alert(
-    //   `Zakat Details:\n` +
-    //     zakatDetails
-    //       .map(
-    //         (detail) =>
-    //           `Grams: ${detail.grams}, Karat: ${
-    //             detail.karat
-    //           }, Zakat Payable: ${detail.zakatPayable.toFixed(4)}\n`
-    //       )
-    //       .join("") +
-    //     `Total Zakat Payable: ${totalZakat.toFixed(4)}`
-    // );
   };
 
   return (

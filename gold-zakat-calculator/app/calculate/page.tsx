@@ -90,28 +90,26 @@ const ZakatCalculatorPage = () => {
     <>
     <NavBar/>
     <div className="container flex flex-col items-center justify-center text-center">
-      <h1 className="text-center">Zakat Calculator</h1>
-      <p>
+      <p className="mt-3">
         Welcome to the Zakat Calculator. Please add your gold details below to
         calculate the Zakat payable.
       </p>
       {goldItems.map((item, index) => (
-        <div key={index} className="gold-item text-white">
-          <div className="flex items-center">
-            <label htmlFor={`grams-${index}`}>Grams:</label>
+        <div key={index} className=" gold-item mt-4 w-full flex flex-col items-start">
+          <div className="flex items-center w-full justify-center">
             <input
-              className="input input-bordered input-success input-xs max-w-xs text-white m-3"
-              placeholder="Provide gold quantity"
+              className="input input-bordered input-success input-xs max-w-x m-3"
+              placeholder="Grams"
               type="number"
               id={`grams-${index}`}
               name="grams"
               value={item.grams}
               onChange={(event) => handleInputChange(event, index)}
             />
-            <label htmlFor={`karat-${index}`}>Karat:</label>
+            
             <input
-              className="input input-bordered input-success input-xs max-w-xs text-white m-3"
-              placeholder="Select gold type"
+              className="input input-bordered input-success input-xs max-w-x m-3"
+              placeholder="Select gold karats"
               type="number"
               id={`karat-${index}`}
               name="karat"
@@ -149,13 +147,13 @@ const ZakatCalculatorPage = () => {
       ></textarea>
 
       <button
-        className="btn btn-primary w-64 rounded-full btn-sm m-3"
+        className="btn btn-success w-64 rounded-full btn-sm m-3 text-white"
         onClick={handleSubmit}
       >
         Calculate Zakat
       </button>
       <Link
-        className="btn btn-outline btn-info w-64 rounded-full btn-sm"
+        className="btn btn-outline w-64 rounded-full btn-sm"
         href="/"
       >
         Go Back to Home

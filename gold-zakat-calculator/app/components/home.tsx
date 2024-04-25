@@ -4,12 +4,12 @@ import React from 'react';
 const Home = () => {
     return (
         <div className="container flex flex-col items-center justify-center text-center">
-             <h1 className='font-bold'>السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</h1>
-            <h1>May the peace, mercy, and blessings of Allah be with you!</h1>
+             <h1 className='font-bold'><b>السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</b></h1>
+            <h1>(May the peace, mercy, and blessings of Allah be with you!)</h1>
            
             <p className='text-left font-light mt-10 pl-9 pr-9'>
             Millions of Muslims may not be aware of the intricate rules regarding Zakat on gold, leading to inaccurate payments. 
-            This app aims to address this by providing accurate calculations in line with Islamic Shariah compliance. Overseen by<b> <strong>Shaikh Dr. Mahmoud Safi</strong></b><br/><br/>
+            This app aims to address this by providing accurate calculations in line with Islamic Shariah compliance. Overseen by<b> <strong>Shaikh Dr. Mahmoud Safi</strong></b> powered by Obaid Ghafoori.<br/><br/>
             It simplifies the process for users. 
             It offers accurate calculations based on grams and karat values. 
             <i className='font-light'> For example, if someone has 100 grams of 18 karat gold, the app will convert it to its pure equivalent (24 karat) and calculate 2.5% of the total. </i>
@@ -19,7 +19,7 @@ const Home = () => {
 
 
             <Link
-                className="btn btn-outline btn-success w-64 rounded-full btn-sm mt-10"
+                className="btn btn-outline w-100 rounded btn-sm mt-10"
                 href="/calculate">
                 Proceed to Zakat calculation
             </Link>

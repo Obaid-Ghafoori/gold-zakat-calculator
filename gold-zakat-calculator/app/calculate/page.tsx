@@ -117,7 +117,7 @@ const ZakatCalculatorPage = () => {
               onChange={(event) => handleInputChange(event, index)}
             />
             <button
-              className="btn btn-bordered btn-success btn-square btn-outline btn-xs tooltip tooltip-right flex justify-center items-center"
+              className="btn btn-bordered btn-success btn-square btn-outline btn-xs tooltip tooltip-top flex justify-center items-center"
               data-tip="Add more gold"
               onClick={handleAddGold}
             >
@@ -147,13 +147,13 @@ const ZakatCalculatorPage = () => {
       ></textarea>
 
       <button
-        className="btn btn-success w-64 rounded-full btn-sm m-3 text-white"
+        className="btn btn-success w-64 rounded btn-sm m-3 text-white"
         onClick={handleSubmit}
       >
         Calculate Zakat
       </button>
       <Link
-        className="btn btn-outline w-64 rounded-full btn-sm"
+        className="btn btn-outline w-64 rounded btn-sm"
         href="/"
       >
         Go Back to Home
